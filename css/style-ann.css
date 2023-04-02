@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+@import url("normalize.css"); /* ------- Reset all CSS Styles */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font: 16px font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+	color: #969e7c;
+	background-image: url(../images/640.jpg);
+	/* 天地左右の中央に配置 ให้วางตรงกลางซ้ายขวา*/
+	background-position: center center;
+	/* タイル状に繰り返し表示しない */
+	background-repeat: no-repeat;
+	/* コンテンツの高さが画像の高さより大きい時、動かないように固定 ฟิคแบล็คกราวด้านหลังไม่ให้เคลื่อนไหว */
+	background-attachment: fixed;
+	/* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+	background-size: cover;
+	/* 背景画像が読み込まれる前に表示される背景のカラー */
+	background-color: #171A0F;
+}
+a{
+	text-decoration: none;/*ตรงลิงค์ไปหน้าต่อไปที่มีขีดเส้นใต้้เอาออก*/
+	color: #969e7c;
+	transition: .3s;/*เวลาเมาส์ชี้ไปแล้วเปลี่ยนเป้นรูปนิ้วเปลี่ยนกลับภายในสามวิ*/
+}
+a:hover
+{
+	color: #e2416e;
+}
+a img{
+	transition:  opacity .3s;
+}
+a hover img {
+	opacity: .6;/*ภาพรูปด้านล่างจะจางๆๆลง*/
+}
+/*大外枠ラッパー*/
+.wrapper{
+	width: 960px;
+	margin: 0 auto;
+	background-color: rgba(3, 26, 15, .8);/*red green blue ulfra แบล็คกราวเป้นสีชาอ่อนๆ*/
+}
+/*ロゴ　サイトタイトル*/
+.header_top{
+	height: 110px;
+}
+.header_top h1{
+	margin: 0;
+	padding: 0;
+}
+.logo{
+	float:right;
+	width: 200px;
+	height: auto;
+	margin: 10px 0 0 20px;/*กว้างด้านบนสิบ*/
+}
+/*ナビゲーション ด้านบนสุดหัวเวป*/
+.navigation_wrapper{
+	width: 500px;
+	height: 40px;
+	margin: 60px 20px 0 auto;
+	float: right;
+}
+.navigation_wrapper ul{ /*ย้ายปุ่มกดไปด้านล่างสุด*/
+	float: center;
+}
+.navigation_wrapper ul li {/*ทำให้เมนูเรียงตามแนวนอน*/
+	margin-left: 20px;
+	font-weight: bold;
+	display: inline-block;
+}
+/*メインビジュアル*/
+.main_image{
+	width: 920px;/*ด้านข้างเวป สองด้านด้านละ 20px หน้าจอทังหมด 960px*/
+	margin: 30px;
+	clear: both;
+}
+/*メインコンテンツทำให้ตัวหนังสืออธิบายหนัง ให้อยุ่ตรงกลางจอ*/
+.text_wrapper{
+	width: 700px;
+	padding: 20px;
+	margin: 80px;
+	text-align: center;
+}
+.text_wrapper h2{
+	font-size: 28px;
+	font-weight: bold;
+	color: #7b8266;
+}
+.text_wrapper p{/*ทำให้ตัวหนังสืออธิบายหนัง ตัวใหญ่่หนาอ่านง่ายขี้น*/
+	font-size: 16px;
+	font-weight: bold;
+	color: #969e7c;
+	line-height: 2;
+}
+
+/*テキストエリア・セカンドページ*/
+.text_wrapper img.right{
+	float: right;
+	margin: 20px 0 0 40px;
+}
+.text_areea{
+	overflow: auto;
+}
+.text_area h2{
+	font-size: 32px;
+}
+.text_area h3{
+	font-size: 22px;
+}
+hr{
+	border: none;
+	border-top: dashed 1px #7b8266;/*dashedคือเส้นใต้ให้เป็นจุด*/
+	margin: 40px 0;
+}
+
+/*バナーエリアตัวหนังสือตรงหัวข้อบนภาพเล็กใหญ่หนาขี้น*/
+.banner_wrapper{
+	width: 1880px;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;
+}
+.banner {/*ทำให้ภาพเล็กด้านล่างเรียงเป็นแนวนอน*/
+	float: left;
+	width: 140px;
+	margin: 0 20px 50px 20px;/*บน0 ขวา40 ล่าง50 ซ้าย20*/
+	background-color: #2f4f4f;/*สีชาที่ด้านหลังภาพเล็ก กลายเป็นกรอบ*/
+}
+.banner h2{/*ทำให้หัวข้อด้านบนภาพเล็กด้านล่างเล็กลง*/
+	font-size: 16px;
+	font-width: bold;
+	padding: 10px;
+}
+.image_wrapper{ /*ทำให้ภาพไปอยุ่ตรงกลาง*/
+	text-align: center;
+}
+.banner_last{
+	margin-right: 0;
+}
+.aside_left { /*サイド部分*/
+	float: left;
+	width: 170px;
+	margin-top: 40px;
+  background-color: #2f4f4f
+}
+.aside_left h3 { /*サイドタイトル部分*/
+ font-size: 18px;
+ margin: 0;
+ padding-bottom: 10px;
+ border-top: 5px solid  #5f9ea0;
+ border-bottom: 5px solid  #5f9ea0;
+ /*border-right: 5px solid  #DDA0DD;
+ border-left: 5px solid  #DDA0DD;*/
+}
+.aside_right { /*サイド部分*/
+	float: right;
+	width: 170px;
+	margin-top: 40px;
+  background-color: #2f4f4f
+}
+.aside_right h3 { /*サイドタイトル部分*/
+ font-size: 18px;
+ margin: 0;
+ padding-bottom: 10px;
+ border-top: 5px solid  #5f9ea0;
+ border-bottom: 5px solid  #5f9ea0;
+ /*border-right: 5px solid  #DDA0DD;
+ border-left: 5px solid  #DDA0DD;*/
+}
+/* フッター */
+.footer_wrapper {
+	clear: both;
+	padding-top: 80px;
+	width: 960px;
+	height: 240px;
+	font-size: 14px;
+	text-align: center;
+}
+.footer_navigation ul{
+	margin: 0;
+	padding: 0;
+}
+.footer_navigation ul li{
+	display: inline-block;
+	padding: 10px;
+	font-weight: bold;
+}
+.logo{
+	float:center;
+	width: 140px;
+	height: auto;
+	margin: 10px 0 0 20px;/*กว้างด้านบนสิบ*/
+}
+/*スライド*/
+#slideshow{
+	position: relative;
+	height: 480px;
+}
+#slideshow IMG{ /*ภาพใหญ่ด้านบนเป็นสไลท์โชว์*/
+	position: absolute;
+	top: 0;
+	left: 0
+	z-index: 8;
+	opacity: 0.0;
+}
+.#slideshow IMG.active{
+	z-index: 10;
+	opacity: 1.0;
+}
+#slideshow IMG.last-active{
+	z-index: 9;
+
+}
